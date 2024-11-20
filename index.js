@@ -9,9 +9,9 @@ const s5 = "and";
 
 // Concatenate the string variables into one new string
 
-
+const tongueTwister = `${s1} ${s2} ${s3} ${s4} ${s5} ${s3} ${s2} ${s1} ${s4}`;
 // Print out the concatenated string
-
+console.log(tongueTwister);
 
 
 
@@ -22,11 +22,15 @@ const part1 = "java";
 const part2 = "script";
 
 // Convert the last letter of part1 and part2 to uppercase and concatenate the strings
+const part1mod = part1.slice(0,3) + part1[part1.length -1].toUpperCase();
 
+const part2mod = part2.slice(0,5) + part2[part2.length -1].toUpperCase();
+
+const result = part1mod+part2mod;
 
 // Print the cameLtaiL-formatted string
 
-
+console.log(result);
 
 
 /*******************************************
@@ -35,10 +39,10 @@ const part2 = "script";
 const billTotal = 84;
 
 // Calculate the tip (15% of the bill total)
-
+const tipAmount = billTotal * 15 /100;
 
 // Print out the tipAmount
-
+console.log(tipAmount);
 
 
 
@@ -47,11 +51,13 @@ const billTotal = 84;
 *******************************************/
 
 // Generate a random integer between 1 and 10 (inclusive)
+const getRandom = Math.random() * 10;
 
+const randomNumber = Math.round(getRandom);
 
 // Print the generated random number
 
-
+console.log (randomNumber);
 
 /*******************************************
     Iteration 3.1 | Booleans
@@ -61,16 +67,24 @@ const a = true;
 const b = false;
 
 // Try and guess the output of the below expressions first and write your answers down:
-const expression1 = a && b;
+const expression1 = a && b; /* f */
 
-const expression2 = a || b;
+const expression2 = a || b; /* t */
 
-const expression3 = !a && b;
+const expression3 = !a && b; /* f */
 
-const expression4 = !(a && b);
+const expression4 = !(a && b);/* t */
 
-const expression5 = !a || !b;
+const expression5 = !a || !b;/* t */
 
-const expression6 = !(a || b);
+const expression6 = !(a || b);/* f */
 
-const expression7 = a && a;
+const expression7 = a && a;/* t */
+
+console.log (expression1 === false);
+console.log (expression2 === true);
+console.log (expression3 === false);
+console.log (expression4 === true);
+console.log (expression5 === true);
+console.log (expression6 === false);
+console.log (expression7 === true);
